@@ -1,9 +1,8 @@
-Project Title
+**Project Title**
 
 Agentic IT Helpdesk Assistant using UiPath Agent Builder, Data Fabric and RPA Workflows
 
-Problem Statement
-
+**Problem Statement**:
 Organizations receive thousands of employee IT support requests relating to:
 
 Password resets
