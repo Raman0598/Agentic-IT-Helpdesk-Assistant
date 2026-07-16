@@ -1,0 +1,269 @@
+Project Title:
+Agentic IT Helpdesk Assistant using UiPath Agent Builder, Data Fabric and RPA Workflows
+
+Problem Statement:
+Organizations receive thousands of employee IT support requests relating to:
+
+Password resets
+VPN issues
+Software installation
+Access requests
+Outlook issues
+Hardware support
+
+Most requests are repetitive, causing high IT support workload and slower response times. This solution implements an Agentic AI Helpdesk Assistant that attempts self-resolution first and creates tickets only when automatic resolution is not possible.
+
+Solution Architecture
+Employee
+    ↓
+UiPath Agent
+    ↓
+Knowledge Base Search
+    ↓
+Issue Classification
+    ↓
+Self-Service Resolution
+    ↓
+Resolved?
+    ↓ Yes ----------------→ Close Request
+
+    ↓ No
+Collect Required Details
+    ↓
+Ticket Generation Workflow
+    ↓
+Data Fabric
+    ↓
+Generate RITM Ticket
+    ↓
+Return Ticket Number
+    ↓
+Employee
+
+Technologies Used:
+UiPath
+UiPath Agent Builder
+UiPath Studio Web
+UiPath RPA Workflow
+UiPath Data Fabric
+UiPath Automation Cloud
+AI
+Agentic AI
+Knowledge Grounding
+Intent Classification
+Decision Making
+Storage
+Data Fabric Entity
+Workflow
+Ticket Generation Process
+RITM ID Generation
+Components Developed:
+1. Conversational IT Helpdesk Agent
+
+Built an AI-powered agent capable of:
+
+Supported Requests
+Password Reset
+VPN Connectivity
+Access Requests
+Software Installation
+Outlook Troubleshooting
+Printer Issues
+MFA Issues
+General FAQ
+
+
+The agent first attempts automatic resolution using the knowledge base before considering escalation.
+
+2. Knowledge Base Grounding
+
+Created enterprise knowledge repository containing:
+
+FAQ Topics
+How to connect VPN
+Password Reset Process
+Power BI Access Request
+Outlook Troubleshooting
+Software Installation
+MFA Issues
+Printer Support
+
+SOP Topics
+Password Reset SOP
+Access Request Process
+Ticket Escalation Process
+
+
+The agent retrieves and uses relevant articles before deciding on escalation.
+
+3. Agent Decision Engine
+
+Implemented decision logic:
+
+Can issue be resolved?
+        ↓
+      Yes
+        ↓
+Respond
+
+        ↓ No
+Collect Information
+        ↓
+Create Ticket
+
+
+The agent determines:
+
+FAQ
+Access Request
+VPN Issue
+Hardware Issue
+Software Request
+Security Incident
+
+4. Ticket Generation Workflow
+
+Developed RPA workflow:
+
+Ticket Generation
+
+
+Workflow responsibilities:
+
+Inputs
+Employee Name
+Employee Email
+Request Type
+Issue Description
+
+Processing
+Generate Ticket Number
+Store Record
+Return Response
+
+Output
+RITM-20260715180001
+
+5. Data Fabric Integration
+
+Created entity:
+
+ITHelpdeskRequest
+
+Fields
+TicketNumber
+EmployeeName
+EmployeeEmail
+RequestType
+IssueDescription
+Status
+CreatedDate
+
+
+The workflow automatically stores all support requests for audit and reporting purposes.
+
+6. Automated Ticket Number Generation
+
+Implemented unique ticket generation logic.
+
+Example:
+
+RITM-20260715173045
+
+
+Features:
+
+Unique
+Trackable
+Auditable
+
+Agent Guardrails
+
+Implemented governance controls:
+
+Allowed
+Answer IT questions
+Guide troubleshooting
+Create tickets
+Use knowledge base
+
+Restricted
+Generate fake ticket numbers
+Grant application access
+Reset passwords directly
+Request passwords
+Expose sensitive information
+
+Sample Scenarios
+Scenario 1
+User
+How do I connect to VPN?
+
+Agent
+Provides VPN setup steps.
+
+
+Result:
+
+No Ticket Created
+
+Scenario 2
+User
+VPN still not working.
+
+Agent
+
+Collects:
+
+Name
+Email
+Issue Details
+
+
+Invokes:
+
+Ticket Generation Workflow
+
+
+Returns:
+
+RITM-20260715181520
+
+Scenario 3
+User
+Need Power BI Access
+
+Agent
+
+Determines:
+
+Approval Required
+
+
+Creates:
+
+Access Request Ticket
+
+Business Benefits
+Faster Resolution
+70-80% common issues resolved without human intervention
+
+Reduced Ticket Volume
+Only unresolved requests become tickets
+
+Improved User Experience
+Instant responses
+Automatic ticket generation
+Self-service guidance
+
+Audit Trail
+All requests stored in Data Fabric
+
+Resume Project Description
+Short Version
+
+Developed an Agentic AI IT Helpdesk Assistant using UiPath Agent Builder, Data Fabric, and RPA Workflows. Implemented knowledge-grounded issue resolution, automated ticket creation, RITM reference generation, and Data Fabric-based request tracking, reducing manual IT support effort through intelligent self-service and automated escalation.
+
+ATS-Friendly Version
+
+Designed and implemented an Agentic AI-based IT Helpdesk Automation solution using UiPath Agent Builder, Studio Web, Data Fabric, and RPA Workflows. Built a knowledge-grounded support agent capable of resolving common IT issues, classifying requests, invoking automated workflows, generating unique RITM ticket identifiers, storing requests in Data Fabric, and escalating unresolved incidents through a governed ticketing process. Demonstrated AI-driven decision-making, workflow orchestration, enterprise data management, and human-in-the-loop support automation.
