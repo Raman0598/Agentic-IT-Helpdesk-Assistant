@@ -7,12 +7,12 @@ Project Description:  Designed and implemented an Agentic AI-based IT Helpdesk A
 **Problem Statement**:
 Organizations receive thousands of employee IT support requests.
 
-Password resets
-VPN issues
-Software installation
-Access requests
-Outlook issues
-Hardware support
+Password resets,
+VPN issues,
+Software installation,
+Access requests,
+Outlook issues,
+Hardware support,
 
 Most requests are repetitive, causing high IT support workload and slower response times. This solution implements an Agentic AI Helpdesk Assistant that attempts self-resolution first and creates tickets only when automatic resolution is not possible.
 
